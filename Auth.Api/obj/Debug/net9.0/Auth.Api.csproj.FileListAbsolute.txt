@@ -1,0 +1,9 @@
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/obj/Debug/net9.0/Auth.Api.csproj.AssemblyReference.cache
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/obj/Debug/net9.0/rpswa.dswa.cache.json
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/obj/Debug/net9.0/Auth.Api.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/obj/Debug/net9.0/Auth.Api.AssemblyInfoInputs.cache
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/obj/Debug/net9.0/Auth.Api.AssemblyInfo.cs
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/obj/Debug/net9.0/Auth.Api.csproj.CoreCompileInputs.cache
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/obj/Debug/net9.0/Auth.Api.MvcApplicationPartsAssemblyInfo.cs
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/obj/Debug/net9.0/Auth.Api.MvcApplicationPartsAssemblyInfo.cache
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/obj/Debug/net9.0/Auth.Api.sourcelink.json

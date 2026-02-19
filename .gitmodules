@@ -1,0 +1,3 @@
+[submodule "Intercore.shared"]
+	path = Intercore.shared
+	url = https://github.com/MatoxEdriel/practica_microservicios_dot_net.git

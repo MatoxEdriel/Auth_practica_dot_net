@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "5EZw2yFTMhk=",
+  "dgSpecHash": "/M/LCuieZ1o=",
   "success": true,
   "projectFilePath": "/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/Auth.Api.csproj",
   "expectedPackageFiles": [
+    "/Users/ingcampoverde/.nuget/packages/confluent.kafka/2.13.0/confluent.kafka.2.13.0.nupkg.sha512",
+    "/Users/ingcampoverde/.nuget/packages/librdkafka.redist/2.13.0/librdkafka.redist.2.13.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/masstransit/9.1.0-develop.60/masstransit.9.1.0-develop.60.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/masstransit.abstractions/9.1.0-develop.60/masstransit.abstractions.9.1.0-develop.60.nupkg.sha512",
+    "/Users/ingcampoverde/.nuget/packages/masstransit.kafka/9.1.0-develop.60/masstransit.kafka.9.1.0-develop.60.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.aspnetcore.openapi/9.0.8/microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.0/microsoft.extensions.configuration.abstractions.9.0.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.0/microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512",
@@ -17,7 +20,8 @@
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.0/microsoft.extensions.logging.abstractions.9.0.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.options/9.0.0/microsoft.extensions.options.9.0.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.primitives/9.0.0/microsoft.extensions.primitives.9.0.0.nupkg.sha512",
-    "/Users/ingcampoverde/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+    "/Users/ingcampoverde/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512",
+    "/Users/ingcampoverde/.nuget/packages/intercore.shared/1.0.0/intercore.shared.1.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -8,7 +8,13 @@
 
     <ItemGroup>
         <PackageReference Include="MassTransit" Version="9.1.0-develop.60" />
+        <PackageReference Include="MassTransit.Kafka" Version="9.1.0-develop.60" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.8"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Intercore.shared\Intercore.shared\Intercore.shared.csproj" />
+      <ProjectReference Include="..\Intercore.shared\resource\resource.csproj" />
     </ItemGroup>
 
 </Project>
