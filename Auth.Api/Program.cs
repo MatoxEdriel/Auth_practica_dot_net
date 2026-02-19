@@ -1,7 +1,7 @@
 using Auth.Api.Consumers;
 using Intercore.shared.Constans.KAFKA.topics;
 using MassTransit;
-using Intercore.shared.CONSTANS.KAFKA.topics;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.WebHost.ConfigureKestrel((context, options) =>
