@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth.Api", "Auth.Api\Auth.Api.csproj", "{0DA4E082-63B8-4E77-97F3-8A7658533C61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DA4E082-63B8-4E77-97F3-8A7658533C61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DA4E082-63B8-4E77-97F3-8A7658533C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DA4E082-63B8-4E77-97F3-8A7658533C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DA4E082-63B8-4E77-97F3-8A7658533C61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
