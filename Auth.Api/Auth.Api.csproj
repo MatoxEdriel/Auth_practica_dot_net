@@ -4,6 +4,7 @@
         <TargetFramework>net9.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     </PropertyGroup>
 
     <ItemGroup>
@@ -13,8 +14,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Intercore.shared\Intercore.shared\Intercore.shared.csproj" />
-      <ProjectReference Include="..\Intercore.shared\resource\resource.csproj" />
+        <ProjectReference Include="..\Intercore.shared\Intercore.shared\Intercore.shared.csproj">
+            <Private>true</Private>
+        </ProjectReference>
     </ItemGroup>
 
 </Project>
