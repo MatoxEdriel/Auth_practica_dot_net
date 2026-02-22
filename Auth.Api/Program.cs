@@ -36,7 +36,13 @@ builder.Services.AddMassTransit(x =>
     x.AddRider(rider =>
     {
         rider.AddConsumer<RegisterUserConsumer>();
-
+        rider.AddConsumer<RecoverPasswordConsumer>();
+        
+        
+        //podriamos avanzar en hacer un producer para eventos 
+        rider.AddProducer<RecoveryMessages.PasswordRecoveryRequestedEvent>(AuthTopics.PasswordRecoveryRequested);
+        
+        
         rider.UsingKafka((context, k) =>
         {
 
@@ -45,6 +51,13 @@ builder.Services.AddMassTransit(x =>
                 AuthTopics.RegisterUserCommand,
                 consumerGroup,
                 e => { e.ConfigureConsumer<RegisterUserConsumer>(context); });
+            
+            //emisor de evento 
+            
+            k.TopicEndpoint<RecoveryMessages.RecoverPasswordRequest>(
+                AuthTopics.RecoverPasswordCommand,
+                consumerGroup, 
+                e => { e.ConfigureConsumer<RecoverPasswordConsumer>(context); });
         });
 
     });
