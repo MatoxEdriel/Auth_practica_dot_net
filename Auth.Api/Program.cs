@@ -1,4 +1,5 @@
 using Auth.Api.Consumers;
+using Auth.Api.Extensions;
 using Intercore.shared.DTOs.Auth;
 using Intercore.shared.Constans.KAFKA.topics;
 using MassTransit;
@@ -35,30 +36,7 @@ builder.Services.AddMassTransit(x =>
 
     x.AddRider(rider =>
     {
-        rider.AddConsumer<RegisterUserConsumer>();
-        rider.AddConsumer<RecoverPasswordConsumer>();
-        
-        
-        //podriamos avanzar en hacer un producer para eventos 
-        rider.AddProducer<RecoveryMessages.PasswordRecoveryRequestedEvent>(AuthTopics.PasswordRecoveryRequested);
-        
-        
-        rider.UsingKafka((context, k) =>
-        {
-
-            k.Host(kafkaHost);
-            k.TopicEndpoint<Intercore.shared.DTOs.Auth.RegisterMessages.RegisterRequest>(
-                AuthTopics.RegisterUserCommand,
-                consumerGroup,
-                e => { e.ConfigureConsumer<RegisterUserConsumer>(context); });
-            
-            //emisor de evento 
-            
-            k.TopicEndpoint<RecoveryMessages.RecoverPasswordRequest>(
-                AuthTopics.RecoverPasswordCommand,
-                consumerGroup, 
-                e => { e.ConfigureConsumer<RecoverPasswordConsumer>(context); });
-        });
+        rider.AddAuthConsumers(consumerGroup, kafkaHost);
 
     });
 });
