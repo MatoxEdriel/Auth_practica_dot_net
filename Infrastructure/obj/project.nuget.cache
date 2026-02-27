@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "/8pyz/p3xgM=",
+  "dgSpecHash": "tIhSPIg7pd8=",
   "success": true,
   "projectFilePath": "/Users/ingcampoverde/RiderProjects/Auth/Infrastructure/Infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/ingcampoverde/.nuget/packages/azure.core/1.49.0/azure.core.1.49.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/azure.identity/1.16.0/azure.identity.1.16.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/dapper/2.1.66/dapper.2.1.66.nupkg.sha512",
+    "/Users/ingcampoverde/.nuget/packages/dapper.sqlbuilder/2.1.66/dapper.sqlbuilder.2.1.66.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.bcl.asyncinterfaces/8.0.0/microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.bcl.cryptography/9.0.9/microsoft.bcl.cryptography.9.0.9.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.data.sqlclient/7.0.0-preview3.25342.7/microsoft.data.sqlclient.7.0.0-preview3.25342.7.nupkg.sha512",

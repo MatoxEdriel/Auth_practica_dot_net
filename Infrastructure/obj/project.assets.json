@@ -51,6 +51,18 @@
           }
         }
       },
+      "Dapper.SqlBuilder/2.1.66": {
+        "type": "package",
+        "dependencies": {
+          "Dapper": "2.1.66"
+        },
+        "compile": {
+          "lib/net8.0/Dapper.SqlBuilder.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Dapper.SqlBuilder.dll": {}
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "type": "package",
         "compile": {
@@ -714,6 +726,22 @@
         "lib/net8.0/Dapper.xml",
         "lib/netstandard2.0/Dapper.dll",
         "lib/netstandard2.0/Dapper.xml",
+        "readme.md"
+      ]
+    },
+    "Dapper.SqlBuilder/2.1.66": {
+      "sha512": "9IXuQtNy/+74NyTeiV1pug++zO0yDXn0UxnEjg8sfXn8wPou/hsRdlrMPkKdmqhp+fxd0qJA6Dd91plu1AHVBw==",
+      "type": "package",
+      "path": "dapper.sqlbuilder/2.1.66",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.sqlbuilder.2.1.66.nupkg.sha512",
+        "dapper.sqlbuilder.nuspec",
+        "lib/net461/Dapper.SqlBuilder.dll",
+        "lib/net8.0/Dapper.SqlBuilder.dll",
+        "lib/netstandard2.0/Dapper.SqlBuilder.dll",
         "readme.md"
       ]
     },
@@ -1627,6 +1655,7 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "Dapper >= 2.1.66",
+      "Dapper.SqlBuilder >= 2.1.66",
       "Domain >= 1.0.0",
       "Microsoft.Data.SqlClient >= 7.0.0-preview3.25342.7",
       "Microsoft.Extensions.Configuration >= 11.0.0-preview.1.26104.118"
@@ -1681,6 +1710,10 @@
         "targetAlias": "net9.0",
         "dependencies": {
           "Dapper": {
+            "target": "Package",
+            "version": "[2.1.66, )"
+          },
+          "Dapper.SqlBuilder": {
             "target": "Package",
             "version": "[2.1.66, )"
           },

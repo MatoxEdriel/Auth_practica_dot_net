@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{D4B9F00A-EE0C-4426-BD87-8C6A79923D72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{0D30EDCA-80E1-4DCC-9346-E18654A8EC67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,18 @@ Global
 		{D4B9F00A-EE0C-4426-BD87-8C6A79923D72}.Release|x64.Build.0 = Release|Any CPU
 		{D4B9F00A-EE0C-4426-BD87-8C6A79923D72}.Release|x86.ActiveCfg = Release|Any CPU
 		{D4B9F00A-EE0C-4426-BD87-8C6A79923D72}.Release|x86.Build.0 = Release|Any CPU
+		{0D30EDCA-80E1-4DCC-9346-E18654A8EC67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D30EDCA-80E1-4DCC-9346-E18654A8EC67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D30EDCA-80E1-4DCC-9346-E18654A8EC67}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0D30EDCA-80E1-4DCC-9346-E18654A8EC67}.Debug|x64.Build.0 = Debug|Any CPU
+		{0D30EDCA-80E1-4DCC-9346-E18654A8EC67}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0D30EDCA-80E1-4DCC-9346-E18654A8EC67}.Debug|x86.Build.0 = Debug|Any CPU
+		{0D30EDCA-80E1-4DCC-9346-E18654A8EC67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D30EDCA-80E1-4DCC-9346-E18654A8EC67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D30EDCA-80E1-4DCC-9346-E18654A8EC67}.Release|x64.ActiveCfg = Release|Any CPU
+		{0D30EDCA-80E1-4DCC-9346-E18654A8EC67}.Release|x64.Build.0 = Release|Any CPU
+		{0D30EDCA-80E1-4DCC-9346-E18654A8EC67}.Release|x86.ActiveCfg = Release|Any CPU
+		{0D30EDCA-80E1-4DCC-9346-E18654A8EC67}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

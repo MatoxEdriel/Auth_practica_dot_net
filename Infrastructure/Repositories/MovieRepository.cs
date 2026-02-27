@@ -70,6 +70,7 @@ public class MovieRepository : IMovieRepository
         return connection.Query<Movie>(sql, new { Date = releaseDate.Date });
     }
     
+    /*
     public IEnumerable<Movie> GetMovies(bool? isActive = null)
     {
         using IDbConnection connection = _context.CreateConnection();
@@ -83,6 +84,30 @@ public class MovieRepository : IMovieRepository
         }
         
         return connection.Query<Movie>(sql, new { Status = isActive });
+    }
+    */
+    
+    public IEnumerable<Movie> GetMovies(MovieFilter filter)
+    {
+        //Dapper.SQLBuilder  o se puede usar if con dapper 
+        using IDbConnection connection = _context.CreateConnection();
+        
+        var builder = new SqlBuilder();
+
+        var template = builder.AddTemplate("SELECT * FROM Movie /**where**/");
+        
+        if (!string.IsNullOrWhiteSpace(filter.Title))
+            builder.Where("Title LIKE @Title", new { Title = $"%{filter.Title}%" });
+
+        if (filter.StartDate.HasValue)
+            builder.Where("CAST(ReleaseDate AS DATE) >= @StartDate", new { StartDate = filter.StartDate.Value.Date });
+
+        if (filter.EndDate.HasValue)
+            builder.Where("CAST(ReleaseDate AS DATE) <= @EndDate", new { EndDate = filter.EndDate.Value.Date });
+
+        if (filter.IsActive.HasValue)
+            builder.Where("IsActive = @IsActive", new { IsActive = filter.IsActive });
+        return connection.Query<Movie>(template.RawSql, template.Parameters);    
     }
 
     public string GetRoomStatus(string roomName)

@@ -113,6 +113,10 @@
               "target": "Package",
               "version": "[2.1.66, )"
             },
+            "Dapper.SqlBuilder": {
+              "target": "Package",
+              "version": "[2.1.66, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[7.0.0-preview3.25342.7, )"
