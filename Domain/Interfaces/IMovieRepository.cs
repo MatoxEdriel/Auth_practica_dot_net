@@ -8,6 +8,7 @@ public interface IMovieRepository
     Movie GetById(int id);
     void Update(Movie movie);
     void Delete(int id);
+    
 
     IEnumerable<Movie> GetByName(string name);
     IEnumerable<Movie> GetByReleaseDate(DateTime releaseDate);
