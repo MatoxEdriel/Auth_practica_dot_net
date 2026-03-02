@@ -10,6 +10,8 @@ public class Movie
     public DateTime ReleaseDate { get; set; }
     public int RoomId { get; set; }
     
+    public Room Room { get; set; }
+    
     
     protected Movie() { }
 

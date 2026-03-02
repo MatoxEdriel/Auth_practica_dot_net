@@ -7,11 +7,32 @@ public class Ticket
 {
 
     public int Id { get; set; }
+    public int MovieId { get; private set; }
+    public int CustomerId { get; private set; }
+    public DateTime PurchaseDate { get; private set; }
+    public decimal Price { get; private set; } 
+    
+    //---------------------
+    /*
+     *Con el objetivo de mostrar informacion relacionada
+     * de otras entidades/tablas 
+     *
+     */
+    public Movie Movie { get; private set; }
+    public Customer Customer { get; private set; }
+    
+    
     
     public string SeatName { get; set; }
+    
+    protected Ticket() { }  
+    
+    
 
 
     //aqui llamaremos la herramienta 
+    
+    /*
     public Ticket(string seatName, ISeatAvailabilityChecker checker )
     {
 
@@ -22,5 +43,15 @@ public class Ticket
 
         SeatName = seatName;
     }
+    */
+    
+    public Ticket(int movieId, int customerId, DateTime purchaseDate, decimal price)
+    {
+        MovieId = movieId;
+        CustomerId = customerId;
+        PurchaseDate = purchaseDate;
+        Price = price;
+    }
+ 
     
 }

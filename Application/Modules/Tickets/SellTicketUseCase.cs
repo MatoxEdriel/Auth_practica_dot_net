@@ -12,14 +12,10 @@ public class SellTicketUseCase
         _seatChecker = seatChecker;
     }
     
+    /*
     public void Execute(string seatNumberFromWeb)
     {
-
         var ticket = new Ticket(seatNumberFromWeb, _seatChecker);
-
     }
-    
-    
-    
-    
+    */
 }
