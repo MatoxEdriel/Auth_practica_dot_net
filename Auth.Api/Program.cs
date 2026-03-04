@@ -1,5 +1,10 @@
+using Application.Modules.Tickets.Interfaces;
+using Application.Modules.Tickets.Services;
 using Auth.Api.Consumers;
 using Auth.Api.Extensions;
+using Domain.Interfaces;
+using Infrastructure.Data;
+using Infrastructure.Repositories;
 using Intercore.shared.DTOs.Auth;
 using Intercore.shared.Constans.KAFKA.topics;
 using MassTransit;
@@ -28,6 +33,16 @@ builder.WebHost.ConfigureKestrel((context, options) =>
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddHealthChecks();
+
+builder.Services.AddSingleton<DapperContext>();
+
+
+builder.Services.AddScoped<ITicketRepository, TicketRepository>();
+
+builder.Services.AddScoped<ITicketService, TicketService>();
+
+
+
 
 builder.Services.AddMassTransit(x =>
 {

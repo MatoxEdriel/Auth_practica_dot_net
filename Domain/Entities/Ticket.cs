@@ -18,8 +18,8 @@ public class Ticket
      * de otras entidades/tablas 
      *
      */
-    public Movie Movie { get; private set; }
-    public Customer Customer { get; private set; }
+    public Movie Movie { get; set; }
+    public Customer Customer { get; set; }
     
     
     

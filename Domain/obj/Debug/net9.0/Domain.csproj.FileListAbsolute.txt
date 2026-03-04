@@ -1,0 +1,12 @@
+/Users/ingcampoverde/RiderProjects/Auth/Domain/bin/Debug/net9.0/Domain.deps.json
+/Users/ingcampoverde/RiderProjects/Auth/Domain/bin/Debug/net9.0/Domain.dll
+/Users/ingcampoverde/RiderProjects/Auth/Domain/bin/Debug/net9.0/Domain.pdb
+/Users/ingcampoverde/RiderProjects/Auth/Domain/obj/Debug/net9.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ingcampoverde/RiderProjects/Auth/Domain/obj/Debug/net9.0/Domain.AssemblyInfoInputs.cache
+/Users/ingcampoverde/RiderProjects/Auth/Domain/obj/Debug/net9.0/Domain.AssemblyInfo.cs
+/Users/ingcampoverde/RiderProjects/Auth/Domain/obj/Debug/net9.0/Domain.csproj.CoreCompileInputs.cache
+/Users/ingcampoverde/RiderProjects/Auth/Domain/obj/Debug/net9.0/Domain.sourcelink.json
+/Users/ingcampoverde/RiderProjects/Auth/Domain/obj/Debug/net9.0/Domain.dll
+/Users/ingcampoverde/RiderProjects/Auth/Domain/obj/Debug/net9.0/refint/Domain.dll
+/Users/ingcampoverde/RiderProjects/Auth/Domain/obj/Debug/net9.0/Domain.pdb
+/Users/ingcampoverde/RiderProjects/Auth/Domain/obj/Debug/net9.0/ref/Domain.dll

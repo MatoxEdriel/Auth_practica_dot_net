@@ -10,4 +10,9 @@
       <ProjectReference Include="..\Domain\Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Modules\Invoice\DTOs\Responses\" />
+      <Folder Include="Modules\Tickets\DTOs\Requests\" />
+    </ItemGroup>
+
 </Project>

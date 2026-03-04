@@ -14,6 +14,8 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\Application\Application.csproj" />
+        <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
         <ProjectReference Include="..\Intercore.shared\Intercore.shared\Intercore.shared.csproj">
             <Private>true</Private>
         </ProjectReference>

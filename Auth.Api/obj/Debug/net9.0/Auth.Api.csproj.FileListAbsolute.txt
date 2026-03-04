@@ -110,3 +110,13 @@
 /Users/ingcampoverde/RiderProjects/Auth/Auth.Api/obj/Debug/net9.0/Auth.Api.pdb
 /Users/ingcampoverde/RiderProjects/Auth/Auth.Api/obj/Debug/net9.0/Auth.Api.genruntimeconfig.cache
 /Users/ingcampoverde/RiderProjects/Auth/Auth.Api/obj/Debug/net9.0/ref/Auth.Api.dll
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/bin/Debug/net9.0/Application.dll
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/bin/Debug/net9.0/Domain.dll
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/bin/Debug/net9.0/Application.pdb
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/bin/Debug/net9.0/Domain.pdb
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/bin/Debug/net9.0/Dapper.dll
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/bin/Debug/net9.0/Dapper.SqlBuilder.dll
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/bin/Debug/net9.0/Microsoft.Extensions.Configuration.dll
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/bin/Debug/net9.0/Infrastructure.dll
+/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/bin/Debug/net9.0/Infrastructure.pdb
