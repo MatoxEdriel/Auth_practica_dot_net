@@ -21,6 +21,26 @@ public class MovieRepository : IMovieRepository
 
     }
 
+    public async Task<int> CreateAsync(Movie movie)
+    {
+            using IDbConnection connection = _context.CreateConnection();
+            var parameters = new
+                {
+                        Title = movie.Title,
+                        ReleaseDate = movie.ReleaseDate,
+                        RoomId = movie.RoomId
+                    
+                };
+                int newId = await connection.QuerySingleAsync<int>(
+                    sql: "sp_insertMovie",
+                    param: parameters,
+                    commandType: CommandType.StoredProcedure   
+                );
+                return newId;
+    }
+
+
+
     public Movie GetById(int id)
     {
         using IDbConnection connection = _context.CreateConnection();
