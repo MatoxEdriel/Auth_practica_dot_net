@@ -2,6 +2,7 @@ using Application.Modules.Tickets.Interfaces;
 using Application.Modules.Tickets.Services;
 using Auth.Api.Consumers;
 using Auth.Api.Extensions;
+using Auth.Api.shared;
 using Domain.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Repositories;
@@ -28,13 +29,26 @@ builder.WebHost.ConfigureKestrel((context, options) =>
 });
 
 
+//Configurcion para la respuesta total
+
+/*
+ *revisar concepto 
+ *
+ * 
+ */
+
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<GlobalResponseFilter>();
+});
 
 
-builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddHealthChecks();
 
 builder.Services.AddSingleton<DapperContext>();
+
+
 
 
 builder.Services.AddScoped<ITicketRepository, TicketRepository>();

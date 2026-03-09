@@ -10,6 +10,9 @@ public interface IMovieRepository
     Task<int> CreateAsync(Movie movie);
     
     
+    Task<IEnumerable<Movie>> SearchAsync(MovieFilter filter);
+    
+    
     
     Movie GetById(int id);
     void Update(Movie movie);

@@ -20,7 +20,34 @@ public class MovieRepository : IMovieRepository
         connection.Execute(sql, movie);
 
     }
-
+    
+    //Estandar POST 
+    /*
+     *Create = /api/movies/create
+     *Update = /api/movies/update
+     *Delete = /api/movies/delete
+     *
+     *
+     * Estandar SP
+     * usp_
+     * Entidad primero - Accion despues
+     * usp_InsertarClient
+     * usp_ActualizarCliente
+     * usp_BorrarFactura
+     *
+     *Ejemplo 2 :
+     * usp_Movie_Insert
+     * usp_Movie_Update
+     * usp_Movie_Delete
+     * usp_Movie_GetAll
+     * 
+     *
+     * Modulos ejemplo:
+     *
+     * sales.usp_Ticket_insert
+     * catalog_usp_Movie_Insert
+     *
+     */
     public async Task<int> CreateAsync(Movie movie)
     {
             using IDbConnection connection = _context.CreateConnection();
@@ -39,6 +66,20 @@ public class MovieRepository : IMovieRepository
                 return newId;
     }
 
+    public async Task<IEnumerable<Movie>> SearchAsync(MovieFilter filter)
+    {
+        using IDbConnection connection = _context.CreateConnection();
+
+        var movies = await connection.QueryAsync<Movie>(
+            sql: "usp_Movie_Search",
+            param: filter,
+            commandType: CommandType.StoredProcedure
+            
+        );
+        return movies;
+
+
+    }
 
 
     public Movie GetById(int id)
