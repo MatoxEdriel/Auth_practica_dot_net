@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iNdV6ZV8MaA=",
+  "dgSpecHash": "g8SMfdgWn1I=",
   "success": true,
   "projectFilePath": "/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/Auth.Api.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "/Users/ingcampoverde/.nuget/packages/masstransit/8.1.3/masstransit.8.1.3.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/masstransit.abstractions/8.1.3/masstransit.abstractions.8.1.3.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/masstransit.kafka/8.1.3/masstransit.kafka.8.1.3.nupkg.sha512",
+    "/Users/ingcampoverde/.nuget/packages/microsoft.aspnetcore.http.features/6.0.0-preview.4.21253.5/microsoft.aspnetcore.http.features.6.0.0-preview.4.21253.5.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.aspnetcore.openapi/9.0.8/microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.bcl.asyncinterfaces/8.0.0/microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.bcl.cryptography/9.0.9/microsoft.bcl.cryptography.9.0.9.nupkg.sha512",
@@ -22,7 +23,7 @@
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.caching.memory/9.0.9/microsoft.extensions.caching.memory.9.0.9.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.configuration/11.0.0-preview.1.26104.118/microsoft.extensions.configuration.11.0.0-preview.1.26104.118.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.configuration.abstractions/11.0.0-preview.1.26104.118/microsoft.extensions.configuration.abstractions.11.0.0-preview.1.26104.118.nupkg.sha512",
-    "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.9/microsoft.extensions.dependencyinjection.abstractions.9.0.9.nupkg.sha512",
+    "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/11.0.0-preview.1.26104.118/microsoft.extensions.dependencyinjection.abstractions.11.0.0-preview.1.26104.118.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.diagnostics.abstractions/8.0.0/microsoft.extensions.diagnostics.abstractions.8.0.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.diagnostics.healthchecks/8.0.0/microsoft.extensions.diagnostics.healthchecks.8.0.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.diagnostics.healthchecks.abstractions/8.0.0/microsoft.extensions.diagnostics.healthchecks.abstractions.8.0.0.nupkg.sha512",
@@ -46,6 +47,7 @@
     "/Users/ingcampoverde/.nuget/packages/system.diagnostics.diagnosticsource/8.0.0/system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/system.diagnostics.eventlog/9.0.9/system.diagnostics.eventlog.9.0.9.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/system.identitymodel.tokens.jwt/8.14.0/system.identitymodel.tokens.jwt.8.14.0.nupkg.sha512",
+    "/Users/ingcampoverde/.nuget/packages/system.io.pipelines/6.0.0-preview.4.21253.7/system.io.pipelines.6.0.0-preview.4.21253.7.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/system.memory/4.6.3/system.memory.4.6.3.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/system.memory.data/8.0.1/system.memory.data.8.0.1.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/system.reflection.emit/4.7.0/system.reflection.emit.4.7.0.nupkg.sha512",

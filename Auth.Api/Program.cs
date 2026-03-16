@@ -1,3 +1,5 @@
+using Application.Modules.Movies.Interfaces;
+using Application.Modules.Movies.Services;
 using Application.Modules.Tickets.Interfaces;
 using Application.Modules.Tickets.Services;
 using Auth.Api.Consumers;
@@ -8,13 +10,20 @@ using Infrastructure.Data;
 using Infrastructure.Repositories;
 using Intercore.shared.DTOs.Auth;
 using Intercore.shared.Constans.KAFKA.topics;
+using Intercore.shared.DTOs;
+using Intercore.shared.middlewares;
 using MassTransit;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 
+
 var kafkaHost = builder.Configuration["KafkaConfig:Host"] ?? "localhost:9092";
-var consumerGroup = builder.Configuration["KafkaConfig:ConsumerGroup"] ?? "auth-service-group";
+//var consumerGroup = builder.Configuration["KafkaConfig:ConsumerGroup"] ?? "auth-service-group";
+
+
 
 
 builder.WebHost.ConfigureKestrel((context, options) =>
@@ -28,14 +37,6 @@ builder.WebHost.ConfigureKestrel((context, options) =>
     }
 });
 
-
-//Configurcion para la respuesta total
-
-/*
- *revisar concepto 
- *
- * 
- */
 
 builder.Services.AddControllers(options =>
 {
@@ -54,6 +55,8 @@ builder.Services.AddSingleton<DapperContext>();
 builder.Services.AddScoped<ITicketRepository, TicketRepository>();
 
 builder.Services.AddScoped<ITicketService, TicketService>();
+builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+builder.Services.AddScoped<IMovieService, MovieService>();
 
 
 
@@ -65,8 +68,17 @@ builder.Services.AddMassTransit(x =>
 
     x.AddRider(rider =>
     {
-        rider.AddAuthConsumers(consumerGroup, kafkaHost);
 
+        rider.AddProducer<CreateAppLogDto>(KafkaTopics.AppLogs);
+        rider.AddProducer<CreateAccessLogDto>(KafkaTopics.AccessLogs);
+        rider.AddProducer<CreateExceptionLogDto>(KafkaTopics.ExceptionLogs);
+        
+        rider.UsingKafka((context, k) =>
+        {
+            k.Host(kafkaHost);
+        });
+        
+        
     });
 });
 
@@ -79,6 +91,10 @@ app.MapHealthChecks("/health");
     {
         app.MapOpenApi();
     }
+
+
+    app.UseMiddleware<KafkaLoggingMiddleware>();
+
     app.MapControllers();
     app.Run();
 

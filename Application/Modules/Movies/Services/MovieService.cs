@@ -9,6 +9,11 @@ namespace Application.Modules.Movies.Services;
 public class MovieService: IMovieService
 {
     private readonly IMovieRepository _movieRepository;
+    
+    public MovieService(IMovieRepository movieRepository)
+    {
+        _movieRepository = movieRepository;
+    }
     public async Task<int> CreateMovieAsync(CreateMovieRequest request)
     {
 

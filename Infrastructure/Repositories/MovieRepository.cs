@@ -11,6 +11,11 @@ public class MovieRepository : IMovieRepository
     
     private readonly DapperContext _context;
     
+    public MovieRepository(DapperContext context)
+    {
+        _context = context;
+    }
+    
     public void Create(Movie movie) {
         using IDbConnection connection  = _context.CreateConnection();
         
