@@ -38,6 +38,19 @@
           }
         }
       },
+      "BouncyCastle.Cryptography/2.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Dapper/2.1.66": {
         "type": "package",
         "compile": {
@@ -61,6 +74,19 @@
         },
         "runtime": {
           "lib/net8.0/Dapper.SqlBuilder.dll": {}
+        }
+      },
+      "FluentFTP/53.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/FluentFTP.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/FluentFTP.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
@@ -483,6 +509,23 @@
           }
         }
       },
+      "SSH.NET/2025.1.0": {
+        "type": "package",
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.6.2",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.3"
+        },
+        "compile": {
+          "lib/net9.0/Renci.SshNet.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Renci.SshNet.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.ClientModel/1.7.0": {
         "type": "package",
         "dependencies": {
@@ -657,6 +700,19 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Application.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -710,6 +766,26 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
+    "BouncyCastle.Cryptography/2.6.2": {
+      "sha512": "7oWOcvnntmMKNzDLsdxAYqApt+AjpRpP2CShjMfIa3umZ42UQMvH0tl1qAliYPNYO6vTdcGMqnRrCPmsfzTI1w==",
+      "type": "package",
+      "path": "bouncycastle.cryptography/2.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "bouncycastle.cryptography.2.6.2.nupkg.sha512",
+        "bouncycastle.cryptography.nuspec",
+        "lib/net461/BouncyCastle.Cryptography.dll",
+        "lib/net461/BouncyCastle.Cryptography.xml",
+        "lib/net6.0/BouncyCastle.Cryptography.dll",
+        "lib/net6.0/BouncyCastle.Cryptography.xml",
+        "lib/netstandard2.0/BouncyCastle.Cryptography.dll",
+        "lib/netstandard2.0/BouncyCastle.Cryptography.xml",
+        "packageIcon.png"
+      ]
+    },
     "Dapper/2.1.66": {
       "sha512": "/q77jUgDOS+bzkmk3Vy9SiWMaetTw+NOoPAV0xPBsGVAyljd5S6P+4RUW7R3ZUGGr9lDRyPKgAMj2UAOwvqZYw==",
       "type": "package",
@@ -743,6 +819,33 @@
         "lib/net8.0/Dapper.SqlBuilder.dll",
         "lib/netstandard2.0/Dapper.SqlBuilder.dll",
         "readme.md"
+      ]
+    },
+    "FluentFTP/53.0.2": {
+      "sha512": "EaBY+FECGqlfDL1HnxaSrPCuakebW6xlfNt/VsH5daPS76kfKA3hZiJjH6OTceNzNDWl9HTpwRXOP96mHWhbIg==",
+      "type": "package",
+      "path": "fluentftp/53.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "fluentftp.53.0.2.nupkg.sha512",
+        "fluentftp.nuspec",
+        "lib/net462/FluentFTP.dll",
+        "lib/net462/FluentFTP.xml",
+        "lib/net472/FluentFTP.dll",
+        "lib/net472/FluentFTP.xml",
+        "lib/net7.0/FluentFTP.dll",
+        "lib/net7.0/FluentFTP.xml",
+        "lib/net8.0/FluentFTP.dll",
+        "lib/net8.0/FluentFTP.xml",
+        "lib/net9.0/FluentFTP.dll",
+        "lib/net9.0/FluentFTP.xml",
+        "lib/netstandard2.0/FluentFTP.dll",
+        "lib/netstandard2.0/FluentFTP.xml",
+        "lib/netstandard2.1/FluentFTP.dll",
+        "lib/netstandard2.1/FluentFTP.xml",
+        "logo-nuget.png"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
@@ -1372,6 +1475,27 @@
         "microsoft.sqlserver.server.nuspec"
       ]
     },
+    "SSH.NET/2025.1.0": {
+      "sha512": "jrnbtf0ItVaXAe6jE8X/kSLa6uC+0C+7W1vepcnRQB/rD88qy4IxG7Lf1FIbWmkoc4iVXv0pKrz+Wc6J4ngmHw==",
+      "type": "package",
+      "path": "ssh.net/2025.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "SS-NET-icon-h500.png",
+        "lib/net462/Renci.SshNet.dll",
+        "lib/net462/Renci.SshNet.xml",
+        "lib/net8.0/Renci.SshNet.dll",
+        "lib/net8.0/Renci.SshNet.xml",
+        "lib/net9.0/Renci.SshNet.dll",
+        "lib/net9.0/Renci.SshNet.xml",
+        "lib/netstandard2.0/Renci.SshNet.dll",
+        "lib/netstandard2.0/Renci.SshNet.xml",
+        "ssh.net.2025.1.0.nupkg.sha512",
+        "ssh.net.nuspec"
+      ]
+    },
     "System.ClientModel/1.7.0": {
       "sha512": "NKKA3/O6B7PxmtIzOifExHdfoWthy3AD4EZ1JfzcZU8yGZTbYrK1qvXsHUL/1yQKKqWSKgIR1Ih/yf2gOaHc4w==",
       "type": "package",
@@ -1646,6 +1770,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/Application.csproj",
+      "msbuildProject": "../Application/Application.csproj"
+    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -1654,11 +1783,14 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "Application >= 1.0.0",
       "Dapper >= 2.1.66",
       "Dapper.SqlBuilder >= 2.1.66",
       "Domain >= 1.0.0",
+      "FluentFTP >= 53.0.2",
       "Microsoft.Data.SqlClient >= 7.0.0-preview3.25342.7",
-      "Microsoft.Extensions.Configuration >= 11.0.0-preview.1.26104.118"
+      "Microsoft.Extensions.Configuration >= 11.0.0-preview.1.26104.118",
+      "SSH.NET >= 2025.1.0"
     ]
   },
   "packageFolders": {
@@ -1687,6 +1819,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "/Users/ingcampoverde/RiderProjects/Auth/Application/Application.csproj": {
+              "projectPath": "/Users/ingcampoverde/RiderProjects/Auth/Application/Application.csproj"
+            },
             "/Users/ingcampoverde/RiderProjects/Auth/Domain/Domain.csproj": {
               "projectPath": "/Users/ingcampoverde/RiderProjects/Auth/Domain/Domain.csproj"
             }
@@ -1717,6 +1852,10 @@
             "target": "Package",
             "version": "[2.1.66, )"
           },
+          "FluentFTP": {
+            "target": "Package",
+            "version": "[53.0.2, )"
+          },
           "Microsoft.Data.SqlClient": {
             "target": "Package",
             "version": "[7.0.0-preview3.25342.7, )"
@@ -1724,6 +1863,10 @@
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
             "version": "[11.0.0-preview.1.26104.118, )"
+          },
+          "SSH.NET": {
+            "target": "Package",
+            "version": "[2025.1.0, )"
           }
         },
         "imports": [

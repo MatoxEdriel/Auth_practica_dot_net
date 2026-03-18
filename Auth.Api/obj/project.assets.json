@@ -38,6 +38,19 @@
           }
         }
       },
+      "BouncyCastle.Cryptography/2.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Confluent.Kafka/2.3.0": {
         "type": "package",
         "dependencies": {
@@ -78,6 +91,19 @@
         },
         "runtime": {
           "lib/net8.0/Dapper.SqlBuilder.dll": {}
+        }
+      },
+      "FluentFTP/53.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/FluentFTP.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/FluentFTP.dll": {
+            "related": ".xml"
+          }
         }
       },
       "librdkafka.redist/2.3.0": {
@@ -808,6 +834,23 @@
           }
         }
       },
+      "SSH.NET/2025.1.0": {
+        "type": "package",
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.6.2",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.3"
+        },
+        "compile": {
+          "lib/net9.0/Renci.SshNet.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Renci.SshNet.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.ClientModel/1.7.0": {
         "type": "package",
         "dependencies": {
@@ -1094,11 +1137,14 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "Application": "1.0.0",
           "Dapper": "2.1.66",
           "Dapper.SqlBuilder": "2.1.66",
           "Domain": "1.0.0",
+          "FluentFTP": "53.0.2",
           "Microsoft.Data.SqlClient": "7.0.0-preview3.25342.7",
-          "Microsoft.Extensions.Configuration": "11.0.0-preview.1.26104.118"
+          "Microsoft.Extensions.Configuration": "11.0.0-preview.1.26104.118",
+          "SSH.NET": "2025.1.0"
         },
         "compile": {
           "bin/placeholder/Infrastructure.dll": {}
@@ -1170,6 +1216,26 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
+    "BouncyCastle.Cryptography/2.6.2": {
+      "sha512": "7oWOcvnntmMKNzDLsdxAYqApt+AjpRpP2CShjMfIa3umZ42UQMvH0tl1qAliYPNYO6vTdcGMqnRrCPmsfzTI1w==",
+      "type": "package",
+      "path": "bouncycastle.cryptography/2.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "bouncycastle.cryptography.2.6.2.nupkg.sha512",
+        "bouncycastle.cryptography.nuspec",
+        "lib/net461/BouncyCastle.Cryptography.dll",
+        "lib/net461/BouncyCastle.Cryptography.xml",
+        "lib/net6.0/BouncyCastle.Cryptography.dll",
+        "lib/net6.0/BouncyCastle.Cryptography.xml",
+        "lib/netstandard2.0/BouncyCastle.Cryptography.dll",
+        "lib/netstandard2.0/BouncyCastle.Cryptography.xml",
+        "packageIcon.png"
+      ]
+    },
     "Confluent.Kafka/2.3.0": {
       "sha512": "JSBXN/X7bBNS92bgZp82v1oT58kw9ndpKSGC5VgELeM/HgXUTssFkG3gEPEGd3cOIa5MMJSLe6+gYwzzjdAJPw==",
       "type": "package",
@@ -1222,6 +1288,33 @@
         "lib/net8.0/Dapper.SqlBuilder.dll",
         "lib/netstandard2.0/Dapper.SqlBuilder.dll",
         "readme.md"
+      ]
+    },
+    "FluentFTP/53.0.2": {
+      "sha512": "EaBY+FECGqlfDL1HnxaSrPCuakebW6xlfNt/VsH5daPS76kfKA3hZiJjH6OTceNzNDWl9HTpwRXOP96mHWhbIg==",
+      "type": "package",
+      "path": "fluentftp/53.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "fluentftp.53.0.2.nupkg.sha512",
+        "fluentftp.nuspec",
+        "lib/net462/FluentFTP.dll",
+        "lib/net462/FluentFTP.xml",
+        "lib/net472/FluentFTP.dll",
+        "lib/net472/FluentFTP.xml",
+        "lib/net7.0/FluentFTP.dll",
+        "lib/net7.0/FluentFTP.xml",
+        "lib/net8.0/FluentFTP.dll",
+        "lib/net8.0/FluentFTP.xml",
+        "lib/net9.0/FluentFTP.dll",
+        "lib/net9.0/FluentFTP.xml",
+        "lib/netstandard2.0/FluentFTP.dll",
+        "lib/netstandard2.0/FluentFTP.xml",
+        "lib/netstandard2.1/FluentFTP.dll",
+        "lib/netstandard2.1/FluentFTP.xml",
+        "logo-nuget.png"
       ]
     },
     "librdkafka.redist/2.3.0": {
@@ -2148,6 +2241,27 @@
         "lib/netstandard2.0/Microsoft.SqlServer.Server.xml",
         "microsoft.sqlserver.server.1.0.0.nupkg.sha512",
         "microsoft.sqlserver.server.nuspec"
+      ]
+    },
+    "SSH.NET/2025.1.0": {
+      "sha512": "jrnbtf0ItVaXAe6jE8X/kSLa6uC+0C+7W1vepcnRQB/rD88qy4IxG7Lf1FIbWmkoc4iVXv0pKrz+Wc6J4ngmHw==",
+      "type": "package",
+      "path": "ssh.net/2025.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "SS-NET-icon-h500.png",
+        "lib/net462/Renci.SshNet.dll",
+        "lib/net462/Renci.SshNet.xml",
+        "lib/net8.0/Renci.SshNet.dll",
+        "lib/net8.0/Renci.SshNet.xml",
+        "lib/net9.0/Renci.SshNet.dll",
+        "lib/net9.0/Renci.SshNet.xml",
+        "lib/netstandard2.0/Renci.SshNet.dll",
+        "lib/netstandard2.0/Renci.SshNet.xml",
+        "ssh.net.2025.1.0.nupkg.sha512",
+        "ssh.net.nuspec"
       ]
     },
     "System.ClientModel/1.7.0": {

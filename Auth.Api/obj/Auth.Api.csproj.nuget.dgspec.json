@@ -238,6 +238,9 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+              "/Users/ingcampoverde/RiderProjects/Auth/Application/Application.csproj": {
+                "projectPath": "/Users/ingcampoverde/RiderProjects/Auth/Application/Application.csproj"
+              },
               "/Users/ingcampoverde/RiderProjects/Auth/Domain/Domain.csproj": {
                 "projectPath": "/Users/ingcampoverde/RiderProjects/Auth/Domain/Domain.csproj"
               }
@@ -268,6 +271,10 @@
               "target": "Package",
               "version": "[2.1.66, )"
             },
+            "FluentFTP": {
+              "target": "Package",
+              "version": "[53.0.2, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[7.0.0-preview3.25342.7, )"
@@ -275,6 +282,10 @@
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[11.0.0-preview.1.26104.118, )"
+            },
+            "SSH.NET": {
+              "target": "Package",
+              "version": "[2025.1.0, )"
             }
           },
           "imports": [
