@@ -1,3 +1,5 @@
+using Application.Modules.FileServe;
+using Application.Modules.FileServe.Models;
 using Application.Modules.Movies.Interfaces;
 using Application.Modules.Movies.Services;
 using Application.Modules.Tickets.Interfaces;
@@ -6,6 +8,7 @@ using Auth.Api.Consumers;
 using Auth.Api.Extensions;
 using Auth.Api.shared;
 using Domain.Interfaces;
+using Infrastructure.Adapters;
 using Infrastructure.Data;
 using Infrastructure.Repositories;
 using Intercore.shared.DTOs.Auth;
@@ -18,11 +21,22 @@ using MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var transferSettings = new FileTransferSettings();
+builder.Configuration.GetSection("FileTransferSettings").Bind(transferSettings);
 
+builder.Services.AddSingleton(transferSettings);
 
 var kafkaHost = builder.Configuration["KafkaConfig:Host"] ?? "localhost:9092";
 //var consumerGroup = builder.Configuration["KafkaConfig:ConsumerGroup"] ?? "auth-service-group";
 
+if (transferSettings.Protocol.ToUpper() == "SFTP")
+{
+    builder.Services.AddTransient<IFileTransferService, SftpAdapter>();
+}
+else
+{
+    builder.Services.AddTransient<IFileTransferService, FtpAdapter>();
+}
 
 
 
