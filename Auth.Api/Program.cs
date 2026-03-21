@@ -1,3 +1,4 @@
+using System.Text;
 using Application.Modules.FileServe;
 using Application.Modules.FileServe.Models;
 using Application.Modules.Movies.Interfaces;
@@ -5,6 +6,8 @@ using Application.Modules.Movies.Services;
 using Application.Modules.Tickets.Interfaces;
 using Application.Modules.Tickets.Services;
 using Auth.Api.Consumers;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using Auth.Api.Extensions;
 using Auth.Api.shared;
 using Domain.Interfaces;
@@ -17,9 +20,10 @@ using Intercore.shared.DTOs;
 using Intercore.shared.middlewares;
 using MassTransit;
 
-
-
 var builder = WebApplication.CreateBuilder(args);
+
+
+
 
 var transferSettings = new FileTransferSettings();
 builder.Configuration.GetSection("FileTransferSettings").Bind(transferSettings);
@@ -27,7 +31,6 @@ builder.Configuration.GetSection("FileTransferSettings").Bind(transferSettings);
 builder.Services.AddSingleton(transferSettings);
 
 var kafkaHost = builder.Configuration["KafkaConfig:Host"] ?? "localhost:9092";
-//var consumerGroup = builder.Configuration["KafkaConfig:ConsumerGroup"] ?? "auth-service-group";
 
 if (transferSettings.Protocol.ToUpper() == "SFTP")
 {
