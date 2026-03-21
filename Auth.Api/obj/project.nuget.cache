@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HTkDBLY/dSo=",
+  "dgSpecHash": "Yd5vOrcai/c=",
   "success": true,
   "projectFilePath": "/Users/ingcampoverde/RiderProjects/Auth/Auth.Api/Auth.Api.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,7 @@
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.configuration/11.0.0-preview.1.26104.118/microsoft.extensions.configuration.11.0.0-preview.1.26104.118.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.configuration.abstractions/11.0.0-preview.1.26104.118/microsoft.extensions.configuration.abstractions.11.0.0-preview.1.26104.118.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/11.0.0-preview.1.26104.118/microsoft.extensions.dependencyinjection.abstractions.11.0.0-preview.1.26104.118.nupkg.sha512",
+    "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.dependencymodel/10.0.0/microsoft.extensions.dependencymodel.10.0.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.diagnostics.abstractions/8.0.0/microsoft.extensions.diagnostics.abstractions.8.0.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.diagnostics.healthchecks/8.0.0/microsoft.extensions.diagnostics.healthchecks.8.0.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.diagnostics.healthchecks.abstractions/8.0.0/microsoft.extensions.diagnostics.healthchecks.abstractions.8.0.0.nupkg.sha512",
@@ -45,13 +46,14 @@
     "/Users/ingcampoverde/.nuget/packages/microsoft.identitymodel.tokens/8.16.0/microsoft.identitymodel.tokens.8.16.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/microsoft.sqlserver.server/1.0.0/microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "/Users/ingcampoverde/.nuget/packages/scrutor/7.0.0/scrutor.7.0.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/ssh.net/2025.1.0/ssh.net.2025.1.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/system.clientmodel/1.7.0/system.clientmodel.1.7.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/system.configuration.configurationmanager/9.0.9/system.configuration.configurationmanager.9.0.9.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/system.diagnostics.diagnosticsource/8.0.0/system.diagnostics.diagnosticsource.8.0.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/system.diagnostics.eventlog/9.0.9/system.diagnostics.eventlog.9.0.9.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/system.identitymodel.tokens.jwt/8.16.0/system.identitymodel.tokens.jwt.8.16.0.nupkg.sha512",
-    "/Users/ingcampoverde/.nuget/packages/system.io.pipelines/6.0.0-preview.4.21253.7/system.io.pipelines.6.0.0-preview.4.21253.7.nupkg.sha512",
+    "/Users/ingcampoverde/.nuget/packages/system.io.pipelines/10.0.0/system.io.pipelines.10.0.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/system.memory/4.6.3/system.memory.4.6.3.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/system.memory.data/8.0.1/system.memory.data.8.0.1.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/system.reflection.emit/4.7.0/system.reflection.emit.4.7.0.nupkg.sha512",
@@ -59,8 +61,8 @@
     "/Users/ingcampoverde/.nuget/packages/system.runtime.compilerservices.unsafe/6.1.2/system.runtime.compilerservices.unsafe.6.1.2.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/system.security.cryptography.pkcs/9.0.9/system.security.cryptography.pkcs.9.0.9.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/system.security.cryptography.protecteddata/9.0.9/system.security.cryptography.protecteddata.9.0.9.nupkg.sha512",
-    "/Users/ingcampoverde/.nuget/packages/system.text.encodings.web/8.0.0/system.text.encodings.web.8.0.0.nupkg.sha512",
-    "/Users/ingcampoverde/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512",
+    "/Users/ingcampoverde/.nuget/packages/system.text.encodings.web/10.0.0/system.text.encodings.web.10.0.0.nupkg.sha512",
+    "/Users/ingcampoverde/.nuget/packages/system.text.json/10.0.0/system.text.json.10.0.0.nupkg.sha512",
     "/Users/ingcampoverde/.nuget/packages/system.threading.channels/8.0.0/system.threading.channels.8.0.0.nupkg.sha512"
   ],
   "logs": []

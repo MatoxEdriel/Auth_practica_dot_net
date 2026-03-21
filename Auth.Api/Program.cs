@@ -1,26 +1,39 @@
 using System.Text;
 using Application.Modules.FileServe;
 using Application.Modules.FileServe.Models;
-using Application.Modules.Movies.Interfaces;
 using Application.Modules.Movies.Services;
-using Application.Modules.Tickets.Interfaces;
-using Application.Modules.Tickets.Services;
-using Auth.Api.Consumers;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using Auth.Api.Extensions;
 using Auth.Api.shared;
-using Domain.Interfaces;
 using Infrastructure.Adapters;
 using Infrastructure.Data;
 using Infrastructure.Repositories;
-using Intercore.shared.DTOs.Auth;
 using Intercore.shared.Constans.KAFKA.topics;
 using Intercore.shared.DTOs;
 using Intercore.shared.middlewares;
 using MassTransit;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
+
+
+    });
+
+builder.Services.AddAuthorization();
 
 
 
@@ -69,11 +82,17 @@ builder.Services.AddSingleton<DapperContext>();
 
 
 
-builder.Services.AddScoped<ITicketRepository, TicketRepository>();
 
-builder.Services.AddScoped<ITicketService, TicketService>();
-builder.Services.AddScoped<IMovieRepository, MovieRepository>();
-builder.Services.AddScoped<IMovieService, MovieService>();
+builder.Services.Scan(selector => selector
+    .FromAssembliesOf(typeof(MovieService), typeof(MovieRepository))
+
+    .AddClasses(classes => classes.Where(c =>
+        c.Name.EndsWith("Service") ||
+        c.Name.EndsWith("Repository")
+    ))
+    .AsMatchingInterface()
+    .WithScopedLifetime()
+);
 
 
 
@@ -102,16 +121,17 @@ builder.Services.AddMassTransit(x =>
 
 var app = builder.Build();
 
+app.UseMiddleware<KafkaLoggingMiddleware>();
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.MapHealthChecks("/health");
 
     if (app.Environment.IsDevelopment())
     {
         app.MapOpenApi();
     }
-
-
-    app.UseMiddleware<KafkaLoggingMiddleware>();
-
+    
     app.MapControllers();
     app.Run();
 
