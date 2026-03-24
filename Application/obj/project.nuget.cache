@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "DDwRqVVL6lQ=",
+  "dgSpecHash": "Ycv9tdZLYHY=",
   "success": true,
   "projectFilePath": "/Users/ingcampoverde/RiderProjects/Auth/Application/Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/ingcampoverde/.nuget/packages/bouncycastle.cryptography/2.6.2/bouncycastle.cryptography.2.6.2.nupkg.sha512",
+    "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.configuration.abstractions/11.0.0-preview.1.26104.118/microsoft.extensions.configuration.abstractions.11.0.0-preview.1.26104.118.nupkg.sha512",
+    "/Users/ingcampoverde/.nuget/packages/microsoft.extensions.primitives/11.0.0-preview.1.26104.118/microsoft.extensions.primitives.11.0.0-preview.1.26104.118.nupkg.sha512",
+    "/Users/ingcampoverde/.nuget/packages/system.memory/4.6.3/system.memory.4.6.3.nupkg.sha512",
+    "/Users/ingcampoverde/.nuget/packages/system.runtime.compilerservices.unsafe/6.1.2/system.runtime.compilerservices.unsafe.6.1.2.nupkg.sha512"
+  ],
   "logs": []
 }

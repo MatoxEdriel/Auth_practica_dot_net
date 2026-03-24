@@ -1178,7 +1178,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "Domain": "1.0.0"
+          "BouncyCastle.Cryptography": "2.6.2",
+          "Domain": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "11.0.0-preview.1.26104.118"
         },
         "compile": {
           "bin/placeholder/Application.dll": {}
