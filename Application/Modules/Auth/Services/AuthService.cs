@@ -55,7 +55,7 @@ public class AuthService: IAuthService
                 Message = "Se ha enviado un código de verificación."
             }; 
         }
-        string token = _jwtProvider.Generate(user);
+        string token = _jwtProvider.GenerateAccessToken(user);
         
         return new LoginResponseDto
         {
@@ -71,15 +71,14 @@ public class AuthService: IAuthService
         var user = await _repository.GetUserByLoginAsync(request.Identifier);
         
         if (user == null)
-            throw new UnauthorizedAccessException("El código es inválido o ha expirado.");
+            throw new UnauthorizedAccessException("El codigo es invalido o ha expirado.");
         
         bool isOtpValid = await _repository.VerifyOtpAsync(user.Id, OtpActionType.Login, request.OtpCode);
         
         if (!isOtpValid)
-            throw new UnauthorizedAccessException("El código es inválido o ha expirado.");
+            throw new UnauthorizedAccessException("El codigo es invalido o ha expirado.");
         
-        string token = _jwtProvider.Generate(user);
-        
+        string token = _jwtProvider.GenerateAccessToken(user);        
         
         return new LoginResponseDto
         {
