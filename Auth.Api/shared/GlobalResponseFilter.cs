@@ -1,5 +1,4 @@
 using Application.DTOs;
-using Intercore.shared.Response;
 using MassTransit.DependencyInjection;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;

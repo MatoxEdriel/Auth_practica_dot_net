@@ -11,7 +11,8 @@
         <PackageReference Include="MassTransit" Version="8.1.3" />
         <PackageReference Include="MassTransit.Kafka" Version="8.1.3" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.13" />
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.8"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.8" />
+        <PackageReference Include="MinePet.Resources" Version="1.0.1" />
         <PackageReference Include="Scrutor" Version="7.0.0" />
         <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.16.0" />
     </ItemGroup>
@@ -19,9 +20,6 @@
     <ItemGroup>
         <ProjectReference Include="..\Application\Application.csproj" />
         <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
-        <ProjectReference Include="..\Intercore.shared\Intercore.shared\Intercore.shared.csproj">
-            <Private>true</Private>
-        </ProjectReference>
     </ItemGroup>
 
 </Project>

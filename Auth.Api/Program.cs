@@ -8,10 +8,10 @@ using Infrastructure.Data;
 using Infrastructure.Repositories;
 using Intercore.shared.Constans.KAFKA.topics;
 using Intercore.shared.DTOs;
-using Intercore.shared.middlewares;
 using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Intercore.shared.middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
