@@ -16,13 +16,9 @@ public class RegisterUserConsumer : IConsumer<RegisterMessages.RegisterRequest>
     public async Task Consume(ConsumeContext<RegisterMessages.RegisterRequest> context)
     {
         var datos = context.Message;
-
         _logger.LogInformation("============================================");
         _logger.LogInformation($"[KAFKA AUTH] Recibido usuario: {datos.Email}");
-      
         _logger.LogInformation("============================================");
-
-       
         await Task.CompletedTask;
     }
 }

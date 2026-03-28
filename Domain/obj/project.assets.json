@@ -20,6 +20,7 @@
       "outputPath": "/Users/ingcampoverde/RiderProjects/Auth/Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
+        "/Users/ingcampoverde/RiderProjects/Auth/NuGet.Config",
         "/Users/ingcampoverde/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
@@ -27,6 +28,7 @@
       ],
       "sources": {
         "/Users/ingcampoverde/LocalNuget": {},
+        "http://localhost:5555/v3/index.json": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
