@@ -2,6 +2,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Application.Modules.Auth.Interface;
+using Auth.Api.shared;
 using Domain.Entities.Auth;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -27,12 +28,12 @@ public class JwtProvider(IConfiguration config): IJwtProvider
     
     private string CreateToken(IEnumerable<Claim> claims, int expireMinutes)
     {
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]!));
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config[ConfigurationProperty.Jwt.Key]!));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
         
         var token = new JwtSecurityToken(
-            issuer: config["Jwt:Issuer"],
-            audience: config["Jwt:Audience"],
+            issuer: config[ConfigurationProperty.Jwt.Issuer],
+            audience: config[ConfigurationProperty.Jwt.Audience],
             claims: claims,
             expires: DateTime.UtcNow.AddMinutes(expireMinutes), 
             signingCredentials: creds
