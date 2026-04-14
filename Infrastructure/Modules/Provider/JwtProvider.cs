@@ -9,16 +9,8 @@ using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegiste
 
 namespace Infrastructure.Modules.Provider;
 
-public class JwtProvider: IJwtProvider
+public class JwtProvider(IConfiguration config): IJwtProvider
 {
-    private readonly IConfiguration _config;
-    
-    public JwtProvider(IConfiguration config)
-    {
-        _config = config;
-    }
-   
-
     public string GenerateAccessToken(User user)
     {
         var claims = new List<Claim>
@@ -28,19 +20,19 @@ public class JwtProvider: IJwtProvider
             new Claim(ClaimTypes.Role, user.Role!) 
         };
         
-        int expireMinutes = int.Parse(_config["Jwt:AccessExpireMinutes"] ?? "60");
+        int expireMinutes = int.Parse(config["Jwt:AccessExpireMinutes"] ?? "60");
 
         return CreateToken(claims, expireMinutes);
     }
     
     private string CreateToken(IEnumerable<Claim> claims, int expireMinutes)
     {
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]!));
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]!));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
         
         var token = new JwtSecurityToken(
-            issuer: _config["Jwt:Issuer"],
-            audience: _config["Jwt:Audience"],
+            issuer: config["Jwt:Issuer"],
+            audience: config["Jwt:Audience"],
             claims: claims,
             expires: DateTime.UtcNow.AddMinutes(expireMinutes), 
             signingCredentials: creds
@@ -59,7 +51,7 @@ public class JwtProvider: IJwtProvider
         };
         
   
-        int expireMinutes = int.Parse(_config["Jwt:ActionExpireMinutes"] ?? "15");
+        int expireMinutes = int.Parse(config["Jwt:ActionExpireMinutes"] ?? "15");
 
         return CreateToken(claims, expireMinutes);
     }
